@@ -14,7 +14,7 @@ using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Business;
 using Core.Utilities.Result;
 using FluentValidation;
-using ValidationException = FluentValidation.ValidationException;
+
 
 namespace Business.Concrete
 {
