@@ -14,7 +14,7 @@ using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Business;
 using Core.Utilities.Result;
 using FluentValidation;
-
+using Business.BusinessAspects.Autofac;
 
 namespace Business.Concrete
 {
@@ -22,7 +22,7 @@ namespace Business.Concrete
     {
         IProductDal _productDal;
         private ICategoryService _categoryService;
-      
+
         public ProductManager(IProductDal productDal, ICategoryService categoryService)
         {
             _productDal = productDal;
@@ -30,6 +30,7 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
      //   [ValidationAspect(typeof(ProductValidator))]
+     [SecuredOperation("products.add")]
         public IResult Add(Product product)
         {
           

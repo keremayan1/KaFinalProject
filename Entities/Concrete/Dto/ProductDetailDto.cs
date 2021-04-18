@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Concrete.IDto
+namespace Entities.Concrete.Dto
 {
     class ProductDetailDto
     {
